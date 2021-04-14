@@ -47,10 +47,11 @@
                 :src="urlImage(this.icon)"
                 v-if="this.getIcon === true"
               ></b-img>
+              <br />
               <span class="temp" v-if="this.temperature > 0">
                 {{ this.temperatureFormat(this.temperature) }}°C
               </span>
-              <span class="temp" v-else>0°C</span>
+              <span class="temp" v-else></span>
             </b-button>
           </b-col>
         </b-row>
@@ -168,17 +169,6 @@ export default {
   outline: none;
 }
 
-h1 {
-  font-weight: 500;
-  color: azure;
-  font-style: oblique;
-  margin-top: 10%;
-}
-
-h6 {
-  color: azure;
-}
-
 .detail {
   margin-top: 5%;
 }
@@ -210,5 +200,11 @@ h6 {
   color: azure;
   font-size: 40px;
   margin-top: 3%;
+}
+
+@media only screen and (width: 1366px) {
+  #weather {
+    zoom: 75%;
+  }
 }
 </style>
